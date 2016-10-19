@@ -16,8 +16,6 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-require('./Timeline.scss');
-
 var _Items = require('./items/Items');
 
 var _Items2 = _interopRequireDefault(_Items);
@@ -84,7 +82,7 @@ var ReactCalendarTimeline = function (_Component) {
   function ReactCalendarTimeline(props) {
     _classCallCheck(this, ReactCalendarTimeline);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ReactCalendarTimeline).call(this, props));
+    var _this = _possibleConstructorReturn(this, (ReactCalendarTimeline.__proto__ || Object.getPrototypeOf(ReactCalendarTimeline)).call(this, props));
 
     _initialiseProps.call(_this);
 
@@ -309,7 +307,7 @@ var ReactCalendarTimeline = function (_Component) {
   }, {
     key: 'changeZoom',
     value: function changeZoom(scale) {
-      var offset = arguments.length <= 1 || arguments[1] === undefined ? 0.5 : arguments[1];
+      var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.5;
       var _props = this.props;
       var minZoom = _props.minZoom;
       var maxZoom = _props.maxZoom;

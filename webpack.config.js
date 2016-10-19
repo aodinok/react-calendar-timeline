@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   context: __dirname,
   entry: {
-    'react-calendar-timeline': './src/index.js'
+    'react-calendar-timeline': './src/styledIndex.js'
   },
   output: {
     path: path.join(__dirname, 'build/dist/'),
